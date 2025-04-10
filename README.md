@@ -15,7 +15,7 @@
 Visit the live site here: [https://pmon.fyz.my.id](https://pmon.fyz.my.id)
 
 <p align="center">
-  <img src="https://https://raw.githubusercontent.com/fikriandrrhm19/poketrove/main/public/image/pokemon_logo.png" alt="Pokémon Logo" width="280"/>
+  <img src="https://raw.githubusercontent.com/fikriandrrhm19/poketrove/main/public/image/pokemon_logo.png" alt="Pokémon Logo" width="280"/>
 </p>
 
 ## Features
