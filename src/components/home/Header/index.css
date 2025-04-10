@@ -1,0 +1,31 @@
+.header-container {
+  @apply bg-[#252A3E] text-white py-4 shadow-xl border-b-2 border-[#97A0CC] border-opacity-35;
+}
+
+.app-title {
+  @apply text-2xl font-bold;
+}
+
+.input-search {
+  @apply px-4 py-2 rounded-md bg-white text-[#252A3E] placeholder-[#97A0CC] border border-gray-300 w-full sm:w-auto;
+}
+
+.select-sort {
+  @apply px-4 py-2 rounded-md bg-[#3D4466] text-[#97A0CC]  w-full sm:w-auto hover:bg-[#97A0CC] hover:text-white;
+}
+
+.warning-message {
+  @apply text-sm text-red-400 mt-1;
+
+  position: static;
+
+  @screen sm {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 0.25rem;
+    white-space: nowrap;
+    z-index: 10;
+  }
+}
+

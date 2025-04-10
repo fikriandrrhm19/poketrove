@@ -1,87 +1,107 @@
-# Welcome to React Router!
+# PokéTrove
 
-A modern, production-ready template for building full-stack React applications using React Router.
+<p align="left">
+  <img src="https://img.shields.io/badge/version-1.0.0-blue" />
+  <img src="https://img.shields.io/badge/license-MIT-green" />
+  <img src="https://img.shields.io/badge/React-19.0.0-61DAFB?logo=react&logoColor=white" />
+  <img src="https://img.shields.io/badge/TailwindCSS-3.4.1-38B2AC?logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vite-6.2.0-646CFF?logo=vite&logoColor=white" />
+  <img src="https://img.shields.io/badge/Demo-pmon.fyz.my.id-blue?logo=vercel&logoColor=white" />
+</p>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+
+**PokéTrove** is a modern and responsive web application built using **React**, **Tailwind CSS**, and **Vite**.  This app lets users browse, search, and explore Pokémon data from the [PokéAPI](https://pokeapi.co/) with a smooth and engaging user experience.
+
+Visit the live site here: [https://pmon.fyz.my.id](https://pmon.fyz.my.id)
+
+<p align="center">
+  <img src="https://https://raw.githubusercontent.com/fikriandrrhm19/poketrove/main/public/image/pokemon_logo.png" alt="Pokémon Logo" width="280"/>
+</p>
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- ⚡ Fast and modern UI powered by Vite and Tailwind CSS  
+- 📱 Responsive grid and list view toggle for Pokémon display  
+- 🔍 Real-time search filtering  
+- 📄 Pagination for easy browsing  
+- 🧭 Pokémon detail page with image, types, and stats  
+- ⬆️ Scroll to top button with animated zoom-out effect  
+- 🧠 Reusable components and hooks  
+
+## Technologies Used
+
+- [React](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
+- [PokéAPI](https://pokeapi.co/)
+- [Lucide Icons](https://lucide.dev/)
+- [PostCSS](https://postcss.org/)
+
+
+## Project Structure
+```
+poketrove/ 
+├── public/              # Static assets served directly (e.g., logo, loading GIF) 
+├── src/ 
+│   ├── assets/          # Fonts and other static resources used in the app 
+│   ├── components/      # Reusable UI components (e.g., cards, header, detail views) 
+│   ├── hooks/           # Custom React hooks for fetching and managing data (e.g., usePokemons) 
+│   ├── pages/           # Page-level components for routing (e.g., Home, Detail) 
+│   ├── routes/          # Centralized routing configuration using React Router 
+│   ├── styles/          # Global styles and custom fonts (via Tailwind + CSS) 
+│   └── utils/           # Utility functions (e.g., sorting logic) 
+├── index.html           # Main HTML template loaded by Vite 
+├── tailwind.config.js   # Tailwind CSS configuration file 
+├── vite.config.js       # Vite build tool configuration
+```
+
 
 ## Getting Started
 
+### Prerequisites
+
+- Node.js ≥ 18
+- npm ≥ 9
+
 ### Installation
 
-Install the dependencies:
-
-```bash
+```
+git clone https://github.com/fikriandrrhm19/poketrove.git
+cd poketrove
 npm install
 ```
 
-### Development
-
-Start the development server with HMR:
-
-```bash
+### Start Development Server
+```
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+Open http://localhost:5173 in your browser to see the app.
 
-## Building for Production
-
-Create a production build:
-
-```bash
+### Build for Production
+```
 npm run build
 ```
 
-## Deployment
+## Screenshots
 
-### Docker Deployment
+<p align="center"> 
+    <img src="https://github.com/user-attachments/assets/1f59bb1f-1c6e-48b6-81a6-ae32e9c8e965" width="720" /> 
+</p> 
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/818062c5-1548-40e5-b7aa-e197fc3bf740" width="720" />
+</p>
 
-To build and run using Docker:
+## License
 
-```bash
-docker build -t my-app .
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
-# Run the container
-docker run -p 3000:3000 my-app
-```
+## Credits
 
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+- Pokémon data provided by [PokéAPI](https://pokeapi.co/)
+- Fonts: [DM Sans](https://fonts.google.com/specimen/DM+Sans)  
+- Icons: [Lucide Icons](https://lucide.dev/)
 
 ---
-
-Built with ❤️ using React Router.
+© 2025 Fikri Andra Irham
+All rights reserved.
