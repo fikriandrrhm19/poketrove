@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 body {
-  @apply font-sans;
+  @apply font-sans bg-[#f7f9fc] text-[#192038] transition-colors duration-300;
+}
+
+.dark body {
+  @apply bg-[#252A3E] text-[#F0F3FF];
 }

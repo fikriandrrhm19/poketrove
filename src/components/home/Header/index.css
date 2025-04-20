@@ -1,21 +1,38 @@
+/* Header Container */
 .header-container {
-  @apply bg-[#252A3E] text-white py-4 shadow-xl border-b-2 border-[#97A0CC] border-opacity-35;
+  @apply bg-white text-[#252A3E] dark:bg-[#252A3E] dark:text-white 
+    py-4 shadow-xl border-b-2 border-[#97A0CC]/35 dark:border-[#97A0CC]/35;
 }
 
+/* Application Title */
 .app-title {
-  @apply text-2xl font-bold;
+  @apply text-2xl font-bold text-[#252A3E] hover:text-[#3D4466] 
+    dark:text-white dark:hover:text-white transition-colors;
 }
 
+/* Search Input */
 .input-search {
-  @apply px-4 py-2 rounded-md bg-white text-[#252A3E] placeholder-[#97A0CC] border border-gray-300 w-full sm:w-auto;
+  @apply px-4 py-2 rounded-md bg-white text-[#252A3E] 
+    placeholder-[#97A0CC] border border-[#97A0CC] 
+    focus:outline-none focus:ring-2 focus:ring-[#97A0CC] 
+    transition-all;
+  @apply dark:bg-[#3D4466] dark:text-white dark:placeholder-[#BCC2E0] dark:border-[#4F5784];
 }
 
+/* Sort & Filter Dropdown */
 .select-sort {
-  @apply px-4 py-2 rounded-md bg-[#3D4466] text-[#97A0CC]  w-full sm:w-auto hover:bg-[#97A0CC] hover:text-white;
+  @apply px-4 py-2 rounded-md bg-white text-[#252A3E] 
+    border border-[#97A0CC] w-full sm:w-auto 
+    hover:bg-[#F0F2FA] hover:text-[#3D4466] 
+    focus:outline-none focus:ring-2 focus:ring-[#97A0CC] 
+    transition-all;
+  @apply dark:bg-[#3D4466] dark:text-[#97A0CC] dark:border-[#4F5784] 
+    dark:hover:bg-[#4F5784] dark:hover:text-white;
 }
 
+/* Warning Message */
 .warning-message {
-  @apply text-sm text-red-400 mt-1;
+  @apply text-sm text-red-600 dark:text-red-400 mt-1;
 
   position: static;
 
@@ -29,3 +46,25 @@
   }
 }
 
+/* General Button */
+button {
+  @apply transition-colors;
+}
+
+/* Icon inside Button */
+button svg {
+  @apply text-[#252A3E] dark:text-white hover:scale-110 transform transition;
+}
+
+/* Display Switch Button on Mobile */
+.switch-display-mobile {
+  @apply flex gap-1 rounded-md p-[1px] text-sm border transition-colors;
+}
+
+.light .switch-display-mobile {
+  @apply bg-[#e4e9f2] text-[#222b45] border-[#8f9bb3];
+}
+
+.dark .switch-display-mobile {
+  @apply bg-[#2F3655] text-white border-[#7885B0];
+}

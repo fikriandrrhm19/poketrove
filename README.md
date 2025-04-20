@@ -1,18 +1,18 @@
 # PokéTrove
 
 <p align="left">
-  <img src="https://img.shields.io/badge/version-1.0.0-blue" />
+  <img src="https://img.shields.io/badge/version-1.1.0-blue" />
   <img src="https://img.shields.io/badge/license-MIT-green" />
   <img src="https://img.shields.io/badge/React-19.0.0-61DAFB?logo=react&logoColor=white" />
   <img src="https://img.shields.io/badge/TailwindCSS-3.4.1-38B2AC?logo=tailwindcss&logoColor=white" />
   <img src="https://img.shields.io/badge/Vite-6.2.0-646CFF?logo=vite&logoColor=white" />
-  <img src="https://img.shields.io/badge/Demo-pmon.fyz.my.id-blue?logo=vercel&logoColor=white" />
+  <img src="https://img.shields.io/badge/Demo-ptrove.fyz.my.id-blue?logo=vercel&logoColor=white" />
 </p>
 
 
 **PokéTrove** is a modern and responsive web application built using **React**, **Tailwind CSS**, and **Vite**.  This app lets users browse, search, and explore Pokémon data from the [PokéAPI](https://pokeapi.co/) with a smooth and engaging user experience.
 
-Visit the live site here: [https://pmon.fyz.my.id](https://pmon.fyz.my.id)
+Visit the live site here: [https://ptrove.fyz.my.id](https://ptrove.fyz.my.id)
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/fikriandrrhm19/poketrove/main/public/image/pokemon_logo.png" alt="Pokémon Logo" width="280"/>
@@ -20,13 +20,14 @@ Visit the live site here: [https://pmon.fyz.my.id](https://pmon.fyz.my.id)
 
 ## Features
 
-- ⚡ Fast and modern UI powered by Vite and Tailwind CSS  
-- 📱 Responsive grid and list view toggle for Pokémon display  
-- 🔍 Real-time search filtering  
-- 📄 Pagination for easy browsing  
-- 🧭 Pokémon detail page with image, types, and stats  
-- ⬆️ Scroll to top button with animated zoom-out effect  
-- 🧠 Reusable components and hooks  
+- ⚡ **Fast & modern UI** powered by Vite + Tailwind CSS  
+- 🌙 **Dark & light mode** with persistence via localStorage  
+- 🔍 **Real-time search** and dynamic Pokémon filtering  
+- 📄 **Pagination** with smooth navigation  
+- 📱 **Responsive view**: Grid/List toggle for all screen sizes  
+- 🧠 **Reusable components & hooks** for cleaner structure  
+- ⬆️ **Animated scroll-to-top** button  
+- 🔒 **State management** via Context API  
 
 ## Technologies Used
 
@@ -41,18 +42,25 @@ Visit the live site here: [https://pmon.fyz.my.id](https://pmon.fyz.my.id)
 ## Project Structure
 ```
 poketrove/ 
-├── public/              # Static assets served directly (e.g., logo, loading GIF) 
+├── public/             # Static assets (logo, loading gif, etc.) 
 ├── src/ 
-│   ├── assets/          # Fonts and other static resources used in the app 
-│   ├── components/      # Reusable UI components (e.g., cards, header, detail views) 
-│   ├── hooks/           # Custom React hooks for fetching and managing data (e.g., usePokemons) 
-│   ├── pages/           # Page-level components for routing (e.g., Home, Detail) 
-│   ├── routes/          # Centralized routing configuration using React Router 
-│   ├── styles/          # Global styles and custom fonts (via Tailwind + CSS) 
-│   └── utils/           # Utility functions (e.g., sorting logic) 
-├── index.html           # Main HTML template loaded by Vite 
-├── tailwind.config.js   # Tailwind CSS configuration file 
-├── vite.config.js       # Vite build tool configuration
+│ ├── assets/           # Fonts and image assets 
+│ │ └── fonts/ 
+│ ├── components/       # Reusable UI components 
+│ │ ├── common/         # Generic components (e.g., Container, ScrollToTopButton) 
+│ │ ├── home/           # Home page components (Header, Grid, Pagination, Toggle) 
+│ │ └── pokemon/        # Detail page & card components 
+│ ├── context/          # Global state management (e.g., filters, theme) 
+│ ├── hooks/            # Custom hooks (e.g., usePokemons) 
+│ ├── pages/            # Page components (Home, Detail) 
+│ ├── routes/           # App routing (React Router) 
+│ ├── styles/           # Global Tailwind config & custom styles 
+│ ├── theme/            # Theme provider (dark/light mode logic) 
+│ └── utils/            # Utility functions (e.g., sort logic) 
+├── index.html          # HTML template 
+├── package.json        # Project dependencies and scripts 
+├── tailwind.config.js  # Tailwind CSS configuration 
+├── vite.config.js      # Vite build configuration
 ```
 
 
@@ -76,7 +84,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:5173 in your browser to see the app.
+Open http://localhost:5173 in your browser to see the app and explore locally.
 
 ### Build for Production
 ```
@@ -86,11 +94,21 @@ npm run build
 ## Screenshots
 
 <p align="center"> 
-    <img src="https://github.com/user-attachments/assets/1f59bb1f-1c6e-48b6-81a6-ae32e9c8e965" width="720" /> 
+    <img src="https://github.com/user-attachments/assets/21dccb1d-d238-4a34-bb6c-8be69bc88bf1" width="720" /> 
+</p> 
+<p align="center"> 
+    <img src="https://github.com/user-attachments/assets/75d07372-98cf-47af-b08a-bc22a9e820e7" width="720" /> 
+</p> 
+<p align="center"> 
+    <img src="https://github.com/user-attachments/assets/8f61cb3a-34df-4e45-8364-e218fc0080f2" width="720" /> 
 </p> 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/818062c5-1548-40e5-b7aa-e197fc3bf740" width="720" />
+    <img src="https://github.com/user-attachments/assets/8cdf46c6-39c9-4999-b5ab-5fb7cab9ce3d" width="720" />
 </p>
+
+## Changelog
+
+See the full changelog in [CHANGELOG.md](./CHANGELOG.md)
 
 ## License
 

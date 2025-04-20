@@ -1,11 +1,31 @@
 .card-wrapper {
-    @apply transition-transform transform hover:scale-105;
+  @apply transition-transform transform hover:scale-105;
 }
 
+/* Manual background and border colors */
 .pokemon-card {
-  @apply bg-[#F0F3FF] rounded-xl shadow-md overflow-hidden flex flex-col items-center text-center p-4;
+  @apply border rounded-xl shadow-md p-4 transition-all duration-500 ease-in-out; /* Durasi 500ms untuk transisi */
+  background-color: #F0F3FF;
+  color: #0C1231; 
+  border-color: #DDE5F7;
+  transition-property: background-color, color, border-color;
 }
 
+/* Light mode styling */
+.light .pokemon-card {
+  background-color: #252A3E; 
+  color: #F0F3FF;
+  border-color: #2F3655;
+}
+
+/* Add transition when switching modes */
+.dark .pokemon-card {
+  background-color: #F0F3FF;
+  color: #0C1231;
+  border-color: #DDE5F7;
+}
+
+/* Single Pokemon Card Styling */
 .pokemon-card.single {
   @apply items-center text-center p-6;
 }
@@ -22,6 +42,7 @@
   @apply mt-2 text-base;
 }
 
+/* Image Styling */
 .pokemon-image {
   @apply object-contain mb-2;
   display: block;
@@ -29,23 +50,25 @@
   margin-right: auto;
 }
 
+/* Pokemon Name Styling */
 .pokemon-name {
   @apply text-lg font-semibold capitalize;
 }
 
-.pokemon-types {
-  @apply flex flex-wrap justify-center items-center gap-1 mt-1;
-}
-
+/* Type Badge Styling */
 .type-badge {
-  @apply text-xs font-medium px-2 py-0.5 rounded-full text-white;
+  @apply text-xs font-semibold px-3 py-1 rounded-full text-white shadow;
+  text-transform: capitalize;
+  display: inline-block;
+  margin-top: 0.25rem;
 }
 
 .pokemon-name {
-  @apply text-sm; 
+  @apply text-sm;
   line-height: 1.1;
 }
 
+/* Type Colors */
 .type-bug      { background-color: #A8B820; }
 .type-dark     { background-color: #705848; }
 .type-dragon   { background-color: #7038F8; }
@@ -64,5 +87,3 @@
 .type-rock     { background-color: #B8A038; }
 .type-steel    { background-color: #B8B8D0; }
 .type-water    { background-color: #6890F0; }
-  
-  

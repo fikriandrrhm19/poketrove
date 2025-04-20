@@ -2,6 +2,8 @@ import './index.css';
 import { Link } from 'react-router-dom';
 
 const PokemonCard = ({ pokemon, viewMode = "single" }) => {
+  console.log(pokemon.name, pokemon.types);
+
   return (
     <Link to={`/pokemon/${pokemon.id}`} className="card-wrapper">
       <div
@@ -11,7 +13,10 @@ const PokemonCard = ({ pokemon, viewMode = "single" }) => {
 >
 
         <img
-          src={pokemon.sprites?.other["official-artwork"]?.front_default}
+          src={
+            pokemon.sprites?.other["official-artwork"]?.front_default ||
+            pokemon.image
+          }
           alt={pokemon.name}
           className="pokemon-image mx-auto"
         />
@@ -24,21 +29,20 @@ const PokemonCard = ({ pokemon, viewMode = "single" }) => {
             {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
           </h2>
           <div className="pokemon-types flex justify-center gap-1 mt-1">
-            {pokemon.types.map((typeInfo) => (
-              <span
-                key={typeInfo.type.name}
-                className={`type-badge type-${typeInfo.type.name}`}
-              >
-                {typeInfo.type.name}
-              </span>
-            ))}
+          {Array.isArray(pokemon.types) &&
+            pokemon.types.map((type) => {
+              const typeName = typeof type === "string" ? type : type.type.name;
+              return (
+                <span key={typeName} className={`type-badge type-${typeName}`}>
+                  {typeName}
+                </span>
+              );
+          })}            
           </div>
         </div>
       </div>
     </Link>
   );
 };
-
-
 
 export default PokemonCard;

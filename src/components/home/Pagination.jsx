@@ -24,15 +24,18 @@ const Pagination = ({ currentPage, setCurrentPage, totalPages }) => {
       <button
         onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
         disabled={currentPage === 1}
-        className="px-2 py-1 bg-[#DDE5F7] hover:bg-[#B3BFE4] active:scale-95 active:bg-[#CBD6F2] text-black rounded transition-all duration-200 disabled:opacity-50"
+        className="px-2 py-1 rounded transition-all duration-200
+                   bg-blue-100 hover:bg-blue-200 active:bg-blue-300 text-black
+                   dark:bg-gray-700 dark:hover:bg-gray-600 dark:active:bg-gray-500 dark:text-white
+                   disabled:opacity-50"
       >
         <span className="block sm:hidden">&lt;</span>
         <span className="hidden sm:block">Previous</span>
       </button>
 
-      {pages.map((page, i) =>
+      {pages.map((page) =>
         typeof page === "string" && page.startsWith("ellipsis") ? (
-          <span key={page} className="px-2 py-1 text-gray-500">...</span>
+          <span key={page} className="px-2 py-1 text-gray-500 dark:text-gray-400">...</span>
         ) : (
           <motion.div
             key={page}
@@ -42,11 +45,12 @@ const Pagination = ({ currentPage, setCurrentPage, totalPages }) => {
           >
             <button
               onClick={() => setCurrentPage(page)}
-              className={`px-2 py-1 rounded transition-colors duration-200 active:scale-95 active:bg-blue-200 ${
-                currentPage === page
-                  ? "bg-[#7885B0] text-white"
-                  : "bg-white border border-gray-300 group-hover:bg-blue-100"
-              }`}
+              className={`px-2 py-1 rounded transition-colors duration-200 active:scale-95
+                ${
+                  currentPage === page
+                    ? "bg-blue-700 text-white dark:bg-blue-500"
+                    : "bg-white text-black border border-gray-300 hover:bg-blue-100 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700"
+                }`}
             >
               {page}
             </button>
@@ -57,7 +61,10 @@ const Pagination = ({ currentPage, setCurrentPage, totalPages }) => {
       <button
         onClick={() => setCurrentPage((prev) => (prev < totalPages ? prev + 1 : prev))}
         disabled={currentPage === totalPages}
-        className="px-2 py-1 bg-[#DDE5F7] hover:bg-[#B3BFE4] active:scale-95 active:bg-[#CBD6F2] transform transition-all duration-200 text-black rounded disabled:opacity-50"
+        className="px-2 py-1 rounded transition-all duration-200
+                   bg-blue-100 hover:bg-blue-200 active:bg-blue-300 text-black
+                   dark:bg-gray-700 dark:hover:bg-gray-600 dark:active:bg-gray-500 dark:text-white
+                   disabled:opacity-50"
       >
         <span className="block sm:hidden">&gt;</span>
         <span className="hidden sm:block">Next</span>

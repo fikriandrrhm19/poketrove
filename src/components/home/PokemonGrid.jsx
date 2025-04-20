@@ -16,7 +16,7 @@ const PokemonGrid = ({ loading, pokemons, pokemonsPerPage, viewMode }) => {
           alt="Loading Pokéball"
           className="h-12 w-12 animate-spin"
         />
-        <span className="text-[#DDE5F7] text-sm animate-pulse">
+        <span className="text-[#2e3a59] dark:text-[#DDE5F7] text-sm animate-pulse">
           Catching Pokémon...
         </span>
       </div>
